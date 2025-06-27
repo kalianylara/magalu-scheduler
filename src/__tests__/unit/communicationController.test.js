@@ -155,17 +155,20 @@ describe('CommunicationController', () => {
     });
 
     it('deve cancelar agendamento com sucesso', async () => {
+      const req = { params: { id: TEST_CONSTANTS.VALID_UUID } };
+      const mockRes = {
+        sendStatus: jest.fn(),
+        json: jest.fn(),
+        status: jest.fn().mockReturnThis()
+      };
       const expectedResult = TestDataFactory.createValidScheduleResponse();
+
       mockService.cancelSchedule.mockResolvedValue(expectedResult);
 
-      await controller.cancelSchedule(mockReq, mockRes);
+      await controller.cancelSchedule(req, mockRes);
 
       expect(mockService.cancelSchedule).toHaveBeenCalledWith(TEST_CONSTANTS.VALID_UUID);
-      expect(mockRes.json).toHaveBeenCalledWith({
-        success: true,
-        data: expectedResult,
-        message: 'Agendamento cancelado com sucesso'
-      });
+      expect(mockRes.sendStatus).toHaveBeenCalledWith(204); 
     });
 
     it('deve tratar erro de cancelamento', async () => {

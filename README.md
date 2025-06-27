@@ -183,7 +183,7 @@ Abaixo estão listadas as principais rotas da API Magalu Scheduler, junto com ex
 
 <h3 id="delete-schedule">DELETE /api/schedules/:id</h3>
 
- Observação:
+Observação:
 Só é possível cancelar um agendamento que ainda esteja com status `"pendente"`.
 Agendamentos com status `"enviado"` ou `"cancelado"` não podem ser removidos.
 

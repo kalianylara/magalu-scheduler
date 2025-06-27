@@ -208,10 +208,9 @@ describe('Integration Tests - Communication API', () => {
       const response = await request(app)
         .delete(`/api/schedules/${TEST_CONSTANTS.VALID_UUID}`);
 
-      AssertionHelpers.expectSuccessResponse(response);
-      AssertionHelpers.expectDataToMatch(response.body.data, deletedSchedule);
-      expect(response.body.message).toBe('Agendamento cancelado com sucesso');
-      
+      expect(response.status).toBe(204);           
+      expect(response.body).toEqual({});           
+      expect(response.text).toBe('');            
       expect(mockPrismaClient.communication.delete).toHaveBeenCalledWith({
         where: { id: TEST_CONSTANTS.VALID_UUID }
       });
@@ -356,7 +355,8 @@ describe('Integration Tests - Communication API', () => {
       const deleteResponse = await request(app)
         .delete(`/api/schedules/${scheduleId}`);
       
-      AssertionHelpers.expectSuccessResponse(deleteResponse);
+      expect(deleteResponse.status).toBe(204);
+      expect(deleteResponse.text).toBe('');
     });
   });
 });

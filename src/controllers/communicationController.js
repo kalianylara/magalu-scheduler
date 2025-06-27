@@ -71,12 +71,9 @@ class CommunicationController {
   async cancelSchedule(req, res) {
     try {
       const { id } = req.params;
-      const deleted = await this.service.cancelSchedule(id);
-      res.json({
-        success: true,
-        data: deleted,
-        message: 'Agendamento cancelado com sucesso'
-      });
+      await this.service.cancelSchedule(id);
+
+      res.sendStatus(204);
     } catch (error) {
       this.handleError(error, res);
     }
