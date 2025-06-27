@@ -83,7 +83,7 @@ DATABASE_URL="mysql://usuario:senha@localhost:3306/magalu_scheduler"
 Se você **já possui o MySQL instalado**, configure sua variável `DATABASE_URL` no arquivo `.env`, e execute o comando abaixo — o banco de dados será criado automaticamente se ainda não existir:
 
 ```bash
-npx prisma migrate dev --name init
+npx prisma migrate dev
 npx prisma generate
 ```
 
