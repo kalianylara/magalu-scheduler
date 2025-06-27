@@ -11,9 +11,9 @@
 <p align="center"><em>Sistema backend para agendamento e envio de mensagens para clientes Magalu</em></p>
 
 <p align="center">
-  <a href="#comecar">🚀 Início</a> • 
-  <a href="#rotas">📌 Endpoints</a> • 
-  <a href="#testes">🧪 Testes</a> • 
+  <a href="#comecar"> Início</a> • 
+  <a href="#rotas"> Endpoints</a> • 
+  <a href="#testes"> Testes</a> • 
 </p>
 
 <p align="center">
