@@ -29,29 +29,6 @@ class NotFoundError extends AppError {
   }
 }
 
-
-// Erro de conflito (409)
-class ConflictError extends AppError {
-  constructor(message) {
-    super(message, 409, 'CONFLICT');
-  }
-}
-
-
-//Erro de autorização (401)
-class UnauthorizedError extends AppError {
-  constructor(message = 'Acesso não autorizado') {
-    super(message, 401, 'UNAUTHORIZED');
-  }
-}
-
-// Erro de permissão (403)
-class ForbiddenError extends AppError {
-  constructor(message = 'Acesso negado') {
-    super(message, 403, 'FORBIDDEN');
-  }
-}
-
 // Erro de banco de dados
 class DatabaseError extends AppError {
   constructor(message, originalError = null) {
@@ -64,8 +41,5 @@ module.exports = {
   AppError,
   ValidationError,
   NotFoundError,
-  ConflictError,
-  UnauthorizedError,
-  ForbiddenError,
   DatabaseError
 };
