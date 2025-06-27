@@ -13,7 +13,6 @@
 <p align="center">
   <a href="#comecar">🚀 Início</a> • 
   <a href="#rotas">📌 Endpoints</a> • 
-  <a href="#colaboradores">👩‍💻 Colaboradores</a> •
   <a href="#testes">🧪 Testes</a> • 
 </p>
 
@@ -42,7 +41,7 @@ Antes de iniciar, certifique-se de que as seguintes ferramentas estejam instalad
 - [Git](https://git-scm.com/)
 - [MySQL (versão 8 ou superior)](https://www.mysql.com/)
 
-<h3>🚀 Setup Rápido</h3>
+<h3> Setup Rápido</h3>
 
 1. **Clone e acesse o projeto:**
 ```bash
@@ -228,26 +227,6 @@ npm test
 
 <h3 id="cobertura">Cobertura de Testes</h3>
 A cobertura de testes será exibida automaticamente, pois o script `test` está configurado com `--coverage`.
-
-<h2 id="colaboradores"> Colaboradores</h2>
-<p>Este projeto foi desenvolvido por <strong>Kaliany Lara</strong>, com base em um template criado por <strong>Fernanda Kipper</strong>, utilizado como estrutura inicial.</p>
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/kalianylara">
-       <img src="https://github.com/kalianylara.png?size=100" width="100px;" alt="Kaliany Lara"/><br>
-        <sub><b>Kaliany Lara</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/FernandaKipper">
-        <img src="https://avatars.githubusercontent.com/u/61896274?v=4" width="100px;" alt="Fernanda Kipper"/><br>
-        <sub><b>Fernanda Kipper</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
 
 ### Princípios Aplicados
 - **Injeção de Dependências**: Container customizado para gerenciamento
