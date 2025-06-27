@@ -41,7 +41,7 @@ Antes de iniciar, certifique-se de que as seguintes ferramentas estejam instalad
 - [Git](https://git-scm.com/)
 - [MySQL (versão 8 ou superior)](https://www.mysql.com/)
 
-<h3> Setup Rápido</h3>
+<h3>Setup Rápido</h3>
 
 1. **Clone e acesse o projeto:**
 ```bash
