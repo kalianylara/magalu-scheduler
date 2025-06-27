@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Communication {
+  id                  String          @id @default(uuid())
+  recipient           String          @map("destinatario_email")
+  message             String          @map("mensagem_conteudo")
+  channel             String          @map("canal_comunicacao") // email, sms, push, whatsapp
+  scheduledAt         DateTime        @map("data_agendada_envio")
+  status              String          @default("pendente") @map("status_envio")
+  createdAt           DateTime        @default(now()) @map("data_criacao")
+}
